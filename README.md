@@ -39,3 +39,9 @@ xyz = [244,255,165]
 
 ## 我的世界1.15.2整合版
 [下载地址](https://pan.baidu.com/s/1uTfpcYGJMR3cQ-gw27DrRw) 提取码 `qdfi`
+
+## Python3 下载地址
+[python down](https://www.python.org/downloads/)
+
+## python cv库安装
+`pip install -i https://pypi.douban.com/simple  opencv-python ` 
