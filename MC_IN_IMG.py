@@ -9,13 +9,13 @@ Created on Sat Apr  4 12:28:18 2020
 import cv2
 
 #图片路径
-imgdir="4.png"
+imgdir="huaweilogo.jpg"
 
 #我的世界函数文件路径
 mcfunction=r"D:\GAME\MC\.minecraft\versions\1.15.2-forge-31.1.18\saves\test\datapacks\mytest\data\test\functions\test1.mcfunction"
 
 #目标生成区域左上角坐标
-xyz = [244,255,165]
+xyz = [244,255,175]
 
 def openimg(imgdir,bl):
     #传入图片路径和，图片缩放比例
