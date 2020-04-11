@@ -9,13 +9,13 @@ Created on Sat Apr  4 12:28:18 2020
 import cv2
 
 #图片路径
-imgdir="huaweilogo.jpg"
+imgdir="sdf.jpg"
 
 #我的世界函数文件路径
 mcfunction=r"D:\GAME\MC\.minecraft\versions\1.15.2-forge-31.1.18\saves\test\datapacks\mytest\data\test\functions\test1.mcfunction"
 
 #目标生成区域左上角坐标
-xyz = [244,255,175]
+xyz = [244,255,150]
 
 def openimg(imgdir,bl):
     #传入图片路径和，图片缩放比例
@@ -26,6 +26,7 @@ def openimg(imgdir,bl):
 #minecraft:glowstone    荧石
 #minecraft:black_wool   黑色羊毛
 #minecraft:stone        石头
+#空气minecraft:air
 #如果想显示更多颜色请添加命令生成规则
 
 def echocode(xyz,vlue,row,col):
@@ -36,13 +37,13 @@ def echocode(xyz,vlue,row,col):
     z=xyz[2]
     if vlue > 200:
         #荧石
-        return("fill {} {} {} {} {} {} minecraft:glowstone\n".format(x+col,y-row,z,x+col,y-row,z))
+        return("fill {} {} {} {} {} {} minecraft:air\n".format(x+col,y-row,z,x+col,y-row,z+5))
     elif vlue>20:
         #黑色羊毛
-        return("fill {} {} {} {} {} {} minecraft:black_wool\n".format(x+col,y-row,z,x+col,y-row,z))
+        return("fill {} {} {} {} {} {} minecraft:black_wool\n".format(x+col,y-row,z,x+col,y-row,z+5))
     else:
-        #石头
-        return("fill {} {} {} {} {} {} minecraft:stone\n".format(x+col,y-row,z,x+col,y-row,z))
+        #石头minecraft:stone
+        return("fill {} {} {} {} {} {} minecraft:stone\n".format(x+col,y-row,z,x+col,y-row,z+5))
 
 def writetxt(mcfunction,xyz,imge):
     #传入我的世界函数文件路径、坐标、图片数组
@@ -54,7 +55,7 @@ def writetxt(mcfunction,xyz,imge):
     file.close()
 
 
-imge=openimg(imgdir,3)
+imge=openimg(imgdir,5)
 writetxt(mcfunction,xyz,imge)
 
 #预览图片,但这不是在游戏里的效果图
