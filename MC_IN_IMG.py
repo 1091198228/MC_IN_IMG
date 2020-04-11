@@ -57,7 +57,7 @@ def writetxt(mcfunction,xyz,imge):
 imge=openimg(imgdir,3)
 writetxt(mcfunction,xyz,imge)
 
-#预览图片
+#预览图片,但这不是在游戏里的效果图
 cv2.namedWindow("Faces")
 cv2.imshow("Faces", imge)
 cv2.waitKey(0)        
