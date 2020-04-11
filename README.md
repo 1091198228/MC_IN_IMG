@@ -37,3 +37,5 @@ xyz = [244,255,165]
 
 在游戏生成图片建筑：，在游戏里面执行``` /function test:test1 ```命令
 
+## 我的世界1.15.2整合版
+[下载地址](https://pan.baidu.com/s/1uTfpcYGJMR3cQ-gw27DrRw) 提取码 `qdfi`
