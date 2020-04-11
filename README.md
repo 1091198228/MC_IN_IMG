@@ -5,7 +5,7 @@
 ![原图](https://github.com/daichenglong/MC_IN_IMG/blob/master/4.png?raw=true)
 
 效果：
-![效果图](https://github.com/daichenglong/MC_IN_IMG/blob/master/%E6%95%88%E6%9E%9C/2020-04-11_17.59.19.png?raw=true)
+![效果图](https://raw.githubusercontent.com/daichenglong/MC_IN_IMG/master/%E6%95%88%E6%9E%9C/2020-04-11_17.59.19.png)
 
 原理：
 + 用cv2库把图片转换为二维数组
