@@ -2,10 +2,10 @@
 ## 在我的世界里生成图片建筑
 
 原图：
-![原图](https://github.com/daichenglong/MC_IN_IMG/blob/master/4.png?raw=true)
+![原图](./4.png)
 
 效果：
-![效果图](https://github.com/daichenglong/MC_IN_IMG/blob/master/%E6%95%88%E6%9E%9C/2020-04-11_17.59.19.png?raw=true)
+![效果图](./%E6%95%88%E6%9E%9C/2020-04-11_17.59.19.png)
 
 原理：
 + 用cv2库把图片转换为二维数组
@@ -37,3 +37,11 @@ xyz = [244,255,165]
 
 在游戏生成图片建筑：，在游戏里面执行``` /function test:test1 ```命令
 
+## 我的世界1.15.2整合版
+[下载地址](https://pan.baidu.com/s/1uTfpcYGJMR3cQ-gw27DrRw) 提取码 `qdfi`
+
+## Python3 下载地址
+[python down](https://www.python.org/downloads/)
+
+## python cv库安装的安装命令
+`pip install -i https://pypi.douban.com/simple  opencv-python ` 
