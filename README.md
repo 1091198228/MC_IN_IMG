@@ -43,5 +43,5 @@ xyz = [244,255,165]
 ## Python3 下载地址
 [python down](https://www.python.org/downloads/)
 
-## python cv库安装
+## python cv库安装的安装命令
 `pip install -i https://pypi.douban.com/simple  opencv-python ` 
