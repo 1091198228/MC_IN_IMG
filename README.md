@@ -29,7 +29,7 @@
 imgdir="4.png"
 
 #我的世界函数文件路径
-mcfunction=r"D:\GAME\MC\.minecraft\versions\1.15.2-forge-31.1.18\saves\test\datapacks\mytest\data\test\functions\test1.mcfunction"
+mcfunction=r"世界存档的路径\test\datapacks\mytest\data\test\functions\test1.mcfunction"
 
 #目标生成区域左上角坐标
 xyz = [244,255,165]
