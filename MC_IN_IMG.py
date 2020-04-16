@@ -10,14 +10,14 @@ import cv2
 import math
 
 #图片路径
-imgdir="169px-Blocks0021a.png"
+imgdir="huaweilogo.jpg"
 #缩放倍数
-bs=1
+bs=3
 #我的世界函数文件路径
 mcfunction=r"D:\GAME\MC\.minecraft\versions\1.15.2\saves\新的世界\datapacks\mytest\data\test\functions\test1.mcfunction"
 
 #目标生成区域左上角坐标
-xyz = [8,253,20]
+xyz = [8,100,20]
 
 def openimg(imgdir,bl):
     #传入图片路径和，图片缩放比例
@@ -93,7 +93,7 @@ black_wool=(0,0,0)
 def echocode3(xyz,rgb,row,col):
     #传入坐标、像素值、y轴偏移、x轴偏移
     #根据传入的像素值来判断生成什么颜色的方块
-    
+
     x=xyz[0]
     y=xyz[1]
     z=xyz[2]
@@ -105,45 +105,46 @@ def echocode3(xyz,rgb,row,col):
     cols2.sort(reverse=False)
     c_id=cols1.index(cols2[0])
     if c_id==0:
-        return("fill {} {} {} {} {} {} minecraft:white_wool\n".format(x+col,y-row,z,x+col,y-row,z))
+        return("fill {} {} {} {} {} {} minecraft:white_wool\n".format(x+col,y,z+row,x+col,y,z+row))
     elif c_id==1:
-        return("fill {} {} {} {} {} {} minecraft:orange_wool\n".format(x+col,y-row,z,x+col,y-row,z))
+        return("fill {} {} {} {} {} {} minecraft:orange_wool\n".format(x+col,y,z+row,x+col,y,z+row))
     elif c_id==2:
-        return("fill {} {} {} {} {} {} minecraft:magenta_wool\n".format(x+col,y-row,z,x+col,y-row,z))
+        return("fill {} {} {} {} {} {} minecraft:magenta_wool\n".format(x+col,y,z+row,x+col,y,z+row))
     elif c_id==3:
-        return("fill {} {} {} {} {} {} minecraft:light_blue_wool\n".format(x+col,y-row,z,x+col,y-row,z))
+        return("fill {} {} {} {} {} {} minecraft:light_blue_wool\n".format(x+col,y,z+row,x+col,y,z+row))
     elif c_id==4:
-        return("fill {} {} {} {} {} {} minecraft:yellow_wool\n".format(x+col,y-row,z,x+col,y-row,z))
+        return("fill {} {} {} {} {} {} minecraft:yellow_wool\n".format(x+col,y,z+row,x+col,y,z+row))
     elif c_id==5:
-        return("fill {} {} {} {} {} {} minecraft:lime_wool\n".format(x+col,y-row,z,x+col,y-row,z))
+        return("fill {} {} {} {} {} {} minecraft:lime_wool\n".format(x+col,y,z+row,x+col,y,z+row))
     elif c_id==6:
-        return("fill {} {} {} {} {} {} minecraft:pink_wool\n".format(x+col,y-row,z,x+col,y-row,z))
+        return("fill {} {} {} {} {} {} minecraft:pink_wool\n".format(x+col,y,z+row,x+col,y,z+row))
     elif c_id==7:
-        return("fill {} {} {} {} {} {} minecraft:gray_wool\n".format(x+col,y-row,z,x+col,y-row,z))
+        return("fill {} {} {} {} {} {} minecraft:gray_wool\n".format(x+col,y,z+row,x+col,y,z+row))
     elif c_id==8:
-        return("fill {} {} {} {} {} {} minecraft:light_gray_wool\n".format(x+col,y-row,z,x+col,y-row,z))
+        return("fill {} {} {} {} {} {} minecraft:light_gray_wool\n".format(x+col,y,z+row,x+col,y,z+row))
     elif c_id==9:
-        return("fill {} {} {} {} {} {} minecraft:cyan_wool\n".format(x+col,y-row,z,x+col,y-row,z))
+        return("fill {} {} {} {} {} {} minecraft:cyan_wool\n".format(x+col,y,z+row,x+col,y,z+row))
     elif c_id==10:
-        return("fill {} {} {} {} {} {} minecraft:purple_wool\n".format(x+col,y-row,z,x+col,y-row,z))
+        return("fill {} {} {} {} {} {} minecraft:purple_wool\n".format(x+col,y,z+row,x+col,y,z+row))
     elif c_id==11:
-        return("fill {} {} {} {} {} {} minecraft:blue_wool\n".format(x+col,y-row,z,x+col,y-row,z))
+        return("fill {} {} {} {} {} {} minecraft:blue_wool\n".format(x+col,y,z+row,x+col,y,z+row))
     elif c_id==12:
-        return("fill {} {} {} {} {} {} minecraft:brown_wool\n".format(x+col,y-row,z,x+col,y-row,z))
+        return("fill {} {} {} {} {} {} minecraft:brown_wool\n".format(x+col,y,z+row,x+col,y,z+row))
     elif c_id==13:
-        return("fill {} {} {} {} {} {} minecraft:green_wool\n".format(x+col,y-row,z,x+col,y-row,z))
+        return("fill {} {} {} {} {} {} minecraft:green_wool\n".format(x+col,y,z+row,x+col,y,z+row))
     elif c_id==14:
-        return("fill {} {} {} {} {} {} minecraft:red_wool\n".format(x+col,y-row,z,x+col,y-row,z))
+        return("fill {} {} {} {} {} {} minecraft:red_wool\n".format(x+col,y,z+row,x+col,y,z+row))
     elif c_id==15:
-        return("fill {} {} {} {} {} {} minecraft:black_wool\n".format(x+col,y-row,z,x+col,y-row,z))
+        return("fill {} {} {} {} {} {} minecraft:black_wool\n".format(x+col,y,z+row,x+col,y,z+row))
     else:
-        return("fill {} {} {} {} {} {} minecraft:glowstone\n".format(x+col,y-row,z,x+col,y-row,z))
+        return("fill {} {} {} {} {} {} minecraft:glowstone\n".format(x+col,y,z+row,x+col,y,z+row))
     
     
 
 def writetxt(mcfunction,xyz,imge):
     #传入我的世界函数文件路径、坐标、图片数组
     print(str(imge.shape[0]) + " " + str(imge.shape[1]))
+    imge=imge[:,:,(2,1,0)]
     file = open(mcfunction,'w')
     for row in range(imge.shape[0]):  #行
         for col in range(imge.shape[1]): #列
