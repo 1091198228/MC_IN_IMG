@@ -10,7 +10,7 @@ import cv2
 import math
 
 #图片路径
-imgdir="huaweilogo.jpg"
+imgdir="16.jpg"
 #缩放倍数
 bs=3
 #我的世界函数文件路径
